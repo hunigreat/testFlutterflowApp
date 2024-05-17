@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "959906693380",
+    "project_id": "my-demo-app-dev-9f4c3",
+    "storage_bucket": "my-demo-app-dev-9f4c3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:959906693380:android:d1cddc4e6d1dd46eb85051",
+        "android_client_info": {
+          "package_name": "com.exissw.jhyoon.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAbcJ7_NakjxLRso8sOIcCD-uacCVVaHq0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
