@@ -228,7 +228,10 @@ class _Onboarding01WidgetState extends State<Onboarding01Widget>
                             padding: const EdgeInsetsDirectional.fromSTEB(
                                 5.0, 44.0, 0.0, 0.0),
                             child: Text(
-                              currentUserDisplayName,
+                              valueOrDefault<String>(
+                                currentUserDisplayName,
+                                '이름',
+                              ),
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .override(
