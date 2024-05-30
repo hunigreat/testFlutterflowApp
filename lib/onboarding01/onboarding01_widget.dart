@@ -228,6 +228,7 @@ class _Onboarding01WidgetState extends State<Onboarding01Widget>
                             padding: const EdgeInsetsDirectional.fromSTEB(
                                 5.0, 44.0, 0.0, 0.0),
                             child: Text(
+                              currentUserEmail,
                               valueOrDefault<String>(
                                 currentUserDisplayName,
                                 '이름',
@@ -312,10 +313,10 @@ class _Onboarding01WidgetState extends State<Onboarding01Widget>
                         padding:
                             const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 0.0, 16.0),
                         child: FFButtonWidget(
-                          onPressed: () {
-                            print('Button pressed ...');
+                          onPressed: () async {
+                            context.pushNamed('Customer');
                           },
-                          text: 'My Account',
+                          text: '암호화 저장 테스트',
                           options: FFButtonOptions(
                             width: 230.0,
                             height: 52.0,
