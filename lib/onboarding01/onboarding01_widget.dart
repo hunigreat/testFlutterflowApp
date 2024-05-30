@@ -229,6 +229,10 @@ class _Onboarding01WidgetState extends State<Onboarding01Widget>
                                 5.0, 44.0, 0.0, 0.0),
                             child: Text(
                               currentUserEmail,
+                              valueOrDefault<String>(
+                                currentUserDisplayName,
+                                '이름',
+                              ),
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .override(
