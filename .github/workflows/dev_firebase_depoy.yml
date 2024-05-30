@@ -26,6 +26,9 @@ jobs:
         with:
           flutter-version: '3.16.9'
           channel: 'stable'
+      - name: Create .env file
+        run: |
+          echo "FIREBASE_ENCRYPT_KEY=${{ secrets.FIREBASE_ENCRYPT_KEY }}" > .env
           
       - name: Install Flutter dependencies
         run: flutter pub get
