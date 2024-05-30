@@ -11,13 +11,21 @@ import 'package:flutter/material.dart';
 // and then add the boilerplate code using the green button on the right!
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:encrypt/encrypt.dart' as encrypt;
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 Future<void> addUserToFirestore(String name, String phone, String email) async {
+
+  // .env 파일 로드
+  await dotenv.load(fileName: ".env");
+  
   // Firestore 인스턴스 가져오기
   FirebaseFirestore firestore = FirebaseFirestore.instance;
 
+   String encryptKey = dotenv.env['FIREBASE_ENCRYPT_KEY']
+     
   // 암호화 키 설정 (고유의 키를 사용해야 합니다)
-  final key = encrypt.Key.fromUtf8('my32lengthsupersecretnooneknows1');
+  // final key = encrypt.Key.fromUtf8('my32lengthsupersecretnooneknows1');
+  final key = encrypt.Key.fromUtf8(encryptKey);   
   final iv = encrypt.IV.fromLength(16);
   final encrypter = encrypt.Encrypter(encrypt.AES(key));
 
