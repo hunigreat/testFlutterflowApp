@@ -21,7 +21,7 @@ Future<void> addUserToFirestore(String name, String phone, String email) async {
   // Firestore 인스턴스 가져오기
   FirebaseFirestore firestore = FirebaseFirestore.instance;
 
-   String encryptKey = dotenv.env['FIREBASE_ENCRYPT_KEY']
+   String encryptKey = dotenv.env['FIREBASE_ENCRYPT_KEY'];
      
   // 암호화 키 설정 (고유의 키를 사용해야 합니다)
   // final key = encrypt.Key.fromUtf8('my32lengthsupersecretnooneknows1');
